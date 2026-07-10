@@ -1,35 +1,38 @@
 {
+  "target": "ES2022", // Good for modern browsers or Node.js
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
+    "esModuleInterop": true,
     // File Layout
     // "rootDir": "./src",
-    // "outDir": "./dist",
+    "outDir": "./dist", // Store compiled files in "dist" folder
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
+    "module": "nodenext", // Supports both ESM & CJS modules / imports
+    "target": "es2022",
+    "allowJs": true,
     "types": [],
     // For nodejs:
-    // "lib": ["esnext"],
+    "lib": ["es2022", "dom", "dom.iterable"], // Or without "dom" libs when building for Node
     // "types": ["node"],
     // and npm install -D @types/node
 
     // Other Outputs
-    "sourceMap": true,
+    "sourceMap": true, // Enables source maps for easier debugging
     "declaration": true,
     "declarationMap": true,
 
     // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": true, // Adds undefined as a value when accessing by index
     "exactOptionalPropertyTypes": true,
 
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
+     "noUnusedLocals": true, // helps you detect unused variable
+     "noUnusedParameters": true, // helps you detect unused function parameters
+     "noFallthroughCasesInSwitch": true, // helps you detect switch cases without break or return
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
