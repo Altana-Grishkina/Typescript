@@ -1,7 +1,7 @@
-const userName = 'Max';
+/* const userName = 'Max';
 
 let age = 30;
-age = 31;
+age = 31; */
 
 
 // we can access to result outside of scope in JavaScript with var
@@ -24,7 +24,7 @@ console.log(result); */
 
 // 60. Arrow functions
 
-const add = (a: number, b: number) => a + b;
+const add = (a: number, b: number = 1) => a + b;
 
 const printOutput:(a: number | string) => void = output => console.log(output);
 
@@ -34,4 +34,4 @@ if(button){
 }
 button
 
-printOutput(add(2, 5));
+printOutput(add(5));
