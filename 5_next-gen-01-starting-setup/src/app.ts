@@ -32,6 +32,20 @@ const button = document.querySelector('button');
 if(button){
     button.addEventListener('click', event => console.log(event));
 }
-button
 
 printOutput(add(5));
+
+// 62. The Spread Operator (...)
+
+const hobbies = ['Sports', 'Cooking'];
+const activeHobbies = ['Hiking'];
+
+activeHobbies.push(...hobbies);
+
+const person = {
+    name: 'Max',
+    age: 30
+};
+
+const copiedPerson = {...person};
+
