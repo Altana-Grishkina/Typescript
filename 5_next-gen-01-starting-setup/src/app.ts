@@ -24,16 +24,16 @@ console.log(result); */
 
 // 60. Arrow functions
 
-const add = (a: number, b: number = 1) => a + b;
+// const add = (a: number, b: number = 1) => a + b;
 
-const printOutput:(a: number | string) => void = output => console.log(output);
+// const printOutput:(a: number | string) => void = output => console.log(output);
 
-const button = document.querySelector('button');
-if(button){
-    button.addEventListener('click', event => console.log(event));
-}
+// const button = document.querySelector('button');
+// if(button){
+//     button.addEventListener('click', event => console.log(event));
+// }
 
-printOutput(add(5));
+// printOutput(add(5));
 
 // 62. The Spread Operator (...)
 
@@ -48,4 +48,16 @@ const person = {
 };
 
 const copiedPerson = {...person};
+
+
+// 63. Rest parameters
+
+const add = (...numbers: number[]) => {
+    numbers.reduce((curResult, curValue) => {
+        return curResult + curValue;
+    }, 0);
+};
+
+const addedNumbers = add(5, 10, 2, 3.7, 8);
+console.log();
 
